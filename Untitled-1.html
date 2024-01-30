@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Responsive</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        .mainnav {
+            height: 10vh;
+            width: 100%;
+            position: relative;
+            /* border: 1px solid; */
+            padding: 1px;
+        }
+
+        .barlogo {
+            height: 6vh;
+            width: 12%;
+            /* border: 1px solid; */
+            margin-left: 3%;
+            margin-top: 1%;
+            transition: 0.8s;
+        }
+
+        .barlogo:hover {
+            background-color: rgba(214, 213, 213, 0.63);
+            cursor: pointer;
+
+        }
+
+        .text {
+            height: max-content;
+            width: max-content;
+            padding: 10px 30px;
+            font-family: Verdana, sans-serif;
+            font-size: 16px;
+            margin-left: 2%;
+            margin-top: 10px;
+            /* border: 2px solid red; */
+        }
+
+        .spn1 {
+            color: black;
+            font-weight: bold;
+            /* margin-left: 3%; */
+            /* letter-spacing: 3px; */
+        }
+
+        .spn2 {
+            color: black;
+            font-weight: lighter;
+            /* margin-left: 3%;  */
+            letter-spacing: 3px;
+        }
+
+        .content {
+            height: max-content;
+            width: max-content;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            /* border: 1px solid; */
+        }
+
+        .list {
+            padding: 10px 20px;
+            font-family: Verdana, sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            text-align: center;
+            /* border: 1px solid; */
+            display: inline-block;
+            /* margin-left: 1%; */
+
+
+            letter-spacing: 3px;
+            transition: 0.8s;
+        }
+
+        .list:hover {
+            background-color: rgba(214, 213, 213, 0.63);
+            cursor: pointer;
+        }
+
+
+
+        .mainbackimg {
+            height: max-content;
+            width: 100%;
+            position: relative;
+            padding: 1px;
+            /* border: 1px solid; */
+        }
+
+        .img1 {
+            height: 100%;
+            width: 100%;
+        }
+
+        .bar {
+            height: 10vh;
+            width: 25%;
+            position: absolute;
+            left: 39%;
+            top: 46%;
+            /* border: 1px solid; */
+
+        }
+
+        .text2 {
+            height: max-content;
+            width: max-content;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 36px;
+            font-weight: 400;
+            margin-top: 1%;
+            margin-left: 5%;
+            color: white;
+        }
+
+        .spn3 {
+            background-color: rgba(0, 0, 0, 0.589);
+            padding: 12px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            font-weight: bold;
+
+
+        }
+
+        .spn4 {
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: white;
+            font-size: 40px;
+            letter-spacing: 3px;
+
+        }
+
+        @media screen and (max-width: 687px) {
+            .spn4 {
+                display: none;
+                visibility: hidden;
+            }
+
+            .content {
+                visibility: hidden;
+            }
+
+        }
+
+        .parent1 {
+            height: max-content;
+            width: 100%;
+            /* border: 1px solid; */
+            /* background-color: aqua; */
+            padding: 1px;
+        }
+
+        .barbox {
+            height: 6vh;
+            width: 10%;
+            /* border: 1px solid; */
+            margin-left: 2%;
+            margin-top: 3%;
+        }
+
+        .text3 {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+
+        }
+
+        .bigbox {
+            height: auto;
+            width: 98%;
+            /* border: 1px solid; */
+            margin: auto;
+            margin-top: 4%;
+        }
+
+        .picsbox {
+            height: 32vh;
+            width: 23%;
+            /* border: 1px solid; */
+            display: inline-block;
+            margin-left: 1.3%;
+            margin-top: 15px;
+        }
+
+        .img2 {
+            height: 100%;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 687px) {
+            .picsbox {
+                width: 45%;
+                margin-left: 2.5%;
+                /* display: block; */
+            }
+
+
+        }
+
+        @media screen and (max-width:515px) {
+            .picsbox {
+                margin-left: 5%;
+                width: 90%;
+            }
+
+        }
+
+        .headingbox {
+            height: 6vh;
+            width: 10%;
+            /* border: 1px solid; */
+            margin-left: 2%;
+            margin-top: 50px;
+        }
+
+        .parabox {
+            height: auto;
+            width: 96%;
+            /* border: 1px solid; */
+            margin-left: 2%;
+            margin-top: 20px;
+        }
+
+        .para {
+            font-family: Verdana, sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: gray;
+        }
+
+        .parent2box {
+            height: auto;
+            width: 96%;
+            /* border: 1px solid; */
+            margin-left: 2%;
+            margin-top: 30px;
+        }
+
+        .childbox {
+            height: 98%;
+            width: 23.5%;
+            /* border: 1px solid; */
+            vertical-align: top;
+            display: inline-block;
+            margin-left: 1%;
+        }
+
+        .box {
+            height: 50%;
+            width: 100%;
+            /* border: 1px solid; */
+
+        }
+
+        .img3 {
+            height: 100%;
+            width: 100%;
+        }
+
+        .box2 {
+            /* height: 8%;
+            width: 100%; */
+            /* border: 1px solid; */
+            padding: 8px 15px;
+
+        }
+
+        .text4 {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            color: rgb(31, 31, 31);
+        }
+
+        .box3 {
+            /* height: 6%;
+            width: 100%; */
+            /* border: 1px solid; */
+            padding: 8px 15px;
+
+        }
+
+        .ptext {
+            font-family: Verdana, sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            color: rgb(102, 102, 102);
+        }
+
+        .box4 {
+            /* height: 16%;
+            width: 100%; */
+            /* border: 1px solid; */
+            padding: 8px 15px;
+
+        }
+
+        .para2 {
+            font-family: Verdana, sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .button {
+            height: 39px;
+            width: 100%;
+            margin-top: 8px;
+            /* padding: 8px 15px; */
+            background-color: white;
+            border: none;
+        }
+
+        .button:hover {
+            background-color: silver;
+            cursor: pointer;
+
+        }
+
+        @media screen and (max-width:627px) {
+            .childbox {
+                width: 48%;
+                margin-top: 20px;
+            }
+
+        }
+
+        @media screen and (max-width:320px) {
+            .childbox {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+        }
+
+        .lastend {
+            height: 8vh;
+            width: 10%;
+            /* border: 1px solid; */
+            margin-left: 2%;
+            margin-top: 80px;
+        }
+
+        .box5 {
+            height: 60vh;
+            width: 96%;
+            /* border: 1px solid; */
+            margin-left: 2%;
+            margin-top: 20px;
+
+        }
+
+        .bar2 {
+            height: auto;
+            width: auto;
+            /* border: 1px solid; */
+        }
+
+        .para3 {
+            font-family: Verdana, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .barbox2 {
+            height: auto;
+            width: 100%;
+            /* border: 1px solid; */
+            margin-top: 20px;
+        }
+
+        #inp {
+            /* /* height: 18%; */
+            width: 100%;
+            font-family: Verdana, sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+
+            margin-top: 10px;
+            border-radius: 5px;
+            padding: 12px 15px;
+
+        }
+
+        .button2 {
+            height: 7vh;
+            width: auto;
+            background-color: black;
+            color: white;
+            border: none;
+            margin-top: 10px;
+        }
+
+        .button2:hover {
+            background-color: gray;
+            color: black;
+            cursor: pointer;
+        }
+
+        .lastdiv {
+            height: 90vh;
+            width: 96%;
+            /* border: 1px solid; */
+            margin-left: 2%;
+            margin-top: 20px;
+        }
+
+        .img4 {
+            height: 100%;
+            width: 100%;
+        }
+
+        @media screen and (max-width:847px) {
+            .lastdiv {
+                height: auto;
+                width: auto;
+                margin-right: 2%;
+            }
+        }
+
+        @media screen and (max-width:641px) {
+            .lastdiv {
+                height: auto;
+                width: auto;
+                margin-right: 2%;
+            }
+        }
+
+        @media screen and (max-width:673px) {
+            .lastdiv {
+                height: auto;
+                width: auto;
+                margin-right: 2%;
+            }
+        }
+
+        @media screen and (max-width:617px) {
+            .lastdiv {
+                height: auto;
+                width: auto;
+                margin-right: 2%;
+            }
+        }
+
+        .lastblack {
+            height: 15vh;
+            width: 100%;
+            background-color: black;
+            margin-top: 10px;
+            padding: 1px;
+        }
+
+        .lastend {
+            height: 8vh;
+            width: max-content;
+            /* border: 1px solid white; */
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        .spn5 {
+            font-family: Verdana, sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: white;
+            
+        }
+
+        .spn6 {
+            font-family: Verdana, sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: white;
+            
+        }
+        .spn6:hover {
+           color: green;
+           cursor: pointer;            
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="mainnav">
+        <div class="text">
+            <span class="spn1">B R </span>
+            <span class="spn2"> Architects</span>
+
+        </div>
+        </h1>
+        <ul class="content">
+            <li class="list">Projects</li>
+            <li class="list">About</li>
+            <li class="list">Contact</li>
+        </ul>
+    </div>
+    <div class="mainbackimg">
+        <div class="bar">
+            <div class="text2">
+                <span class="spn3">BR</span>
+                <span class="spn4">Architects</span>
+            </div>
+
+        </div>
+        <img class="img1" src="./architect.jpg" alt="">
+    </div>
+    <div class="parent1">
+        <div class="barbox">
+            <h1 class="text3">Projects</h1>
+        </div>
+        <div class="bigbox">
+            <div class="picsbox"><img class="img2" src="./house5.jpg" alt=""></div>
+            <div class="picsbox"><img class="img2" src="house2.jpg" alt=""></div>
+            <div class="picsbox"><img class="img2" src="house3.jpg" alt=""></div>
+            <div class="picsbox"><img class="img2" src="house4.jpg" alt=""></div>
+            <div class="picsbox"><img class="img2" src="house2.jpg" alt=""></div>
+            <div class="picsbox"><img class="img2" src="./house5.jpg" alt=""></div>
+            <div class="picsbox"><img class="img2" src="house3.jpg" alt=""></div>
+            <div class="picsbox"><img class="img2" src="house4.jpg" alt=""></div>
+        </div>
+        <div class="headingbox">
+            <h1 class="text3">About</h1>
+        </div>
+        <div class="parabox">
+            <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="parent2box">
+            <div class="childbox">
+                <div class="box"><img class="img3" src="team2.jpg" alt=""></div>
+                <div class="box2">
+                    <h2 class="text4">John Doe</h2>
+                </div>
+                <div class="box3">
+                    <p class="ptext">CEO & Founder</p>
+                </div>
+                <div class="box4">
+                    <p class="para2">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                        elementum.</p>
+                </div>
+                <button class="button">Contact</button>
+            </div>
+            <div class="childbox">
+                <div class="box"><img class="img3" src="team1.jpg" alt=""></div>
+                <div class="box2">
+                    <h2 class="text4">Jane Doe</h2>
+                </div>
+                <div class="box3">
+                    <p class="ptext">Architect
+
+                    </p>
+                </div>
+                <div class="box4">
+                    <p class="para2">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                        elementum.</p>
+                </div>
+                <button class="button">Contact</button>
+            </div>
+            <div class="childbox">
+                <div class="box"><img class="img3" src="team3.jpg" alt=""></div>
+                <div class="box2">
+                    <h2 class="text4">Mike Ross</h2>
+                </div>
+                <div class="box3">
+                    <p class="ptext">Architect
+
+                    </p>
+                </div>
+                <div class="box4">
+                    <p class="para2">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                        elementum.</p>
+                </div>
+                <button class="button">Contact</button>
+            </div>
+            <div class="childbox">
+                <div class="box"><img class="img3" src="team4.jpg" alt=""></div>
+                <div class="box2">
+                    <h2 class="text4">Dan Star</h2>
+                </div>
+                <div class="box3">
+                    <p class="ptext">Architect
+
+                    </p>
+                </div>
+                <div class="box4">
+                    <p class="para2">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                        elementum.</p>
+                </div>
+                <button class="button">Contact</button>
+            </div>
+        </div>
+        <div class="lastend">
+            <h1 class="text3">Contact</h1>
+        </div>
+        <div class="box5">
+            <div class="bar2">
+                <p class="para3">Lets get in touch and talk about your next project.</p>
+            </div>
+            <div class="barbox2">
+                <input type="text" placeholder="Name" id="inp">
+                <input type="text" placeholder="Email" id="inp">
+                <input type="text" placeholder="Subject" id="inp">
+                <input type="text" placeholder="Comment" id="inp">
+            </div>
+            <button class="button2">SEND MESSAGE</button>
+        </div>
+        <div class="lastdiv"><img class="img4" src="map.jpg" alt=""></div>
+        <div class="lastblack">
+            <div class="lastend">
+                <span class="spn5">Powered by</span>
+                <span class="spn6">w3.css</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
